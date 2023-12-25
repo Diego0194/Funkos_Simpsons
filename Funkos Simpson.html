@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Colección Funko Simpsons</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 20px;
+      background-color: #f0f0f0;
+    }
+
+    h1 {
+      text-align: center;
+      color: #333;
+    }
+
+    .funko-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 20px;
+      justify-content: space-around;
+    }
+
+    .funko-card {
+      position: relative;
+      padding: 10px;
+      background-color: #fff;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      overflow: hidden; /* Oculta cualquier parte adicional de la imagen que se desplace fuera del contenedor */
+    }
+
+    h2 {
+      color: #e44d26;
+      font-size: 1.2em;
+      margin-bottom: 8px; /* Añadido espacio entre el título y la imagen */
+    }
+
+    img {
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: contain;
+      cursor: pointer; /* Cambio el cursor a puntero para indicar que es interactivo */
+      transition: opacity 0.3s ease; /* Agregado efecto de transición al cambiar la opacidad de la imagen */
+    }
+
+    .precio {
+      color: #555;
+      font-size: 1.2em;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      display: none; /* Inicialmente oculto */
+    }
+
+    @media only screen and (max-width: 1169px) {
+      .funko-container {
+        grid-template-columns: repeat(2, minmax(100px, 1fr));
+      }
+
+      h2 {
+        font-size: 1em;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Mi Colección de Funko Pops Los Simpson</h1>
+
+  <div class="funko-container">
+
+    <div class="funko-card" onclick="toggleView(this)">
+      <h2>Funko Pop #496 - Radioactive Man</h2>
+      <img src="img/496 - Radioactive Man.jpg" alt="Funko Pop #496 - Radioactive Man">
+      <p class="precio">Precio: 11,00€</p>
+    </div>
+
+    <div class="funko-card" onclick="toggleView(this)">
+      <h2>Funko Pop #497 - Lisa Simpson</h2>
+      <img src="img/497 - Lisa Simpson.jpg" alt="Funko Pop #497 - Lisa Simpson">
+      <p class="precio">Precio: 11,00</p>
+    </div>
+
+    <div class="funko-card" onclick="toggleView(this)">
+      <h2>Funko Pop #498 - Maggie Simpson</h2>
+      <img src="img/498 - Maggie Simpson.jpg" alt="Funko Pop #498 - Maggie Simpson">
+      <p class="precio">Precio: 11,00€</p>
+    </div>
+
+    <div class="funko-card" onclick="toggleView(this)">
+      <h2>Funko Pop #499 - Grampa Simpson</h2>
+      <img src="img/499 - Grampa Simpson.jpg" alt="Funko Pop #499 - Grampa Simpson">
+      <p class="precio">Precio: 10,50€</p>
+    </div>
+
+<!-- Continúa agregando más Funko Pops según sea necesario -->
+
+</div>
+  <script>
+    function toggleView(card) {
+      var img = card.querySelector('img');
+      var priceElement = card.querySelector('.precio');
+
+      // Verifica si la imagen está visible
+      if (img.style.opacity === '1') {
+        // Desvanece la imagen
+        img.style.opacity = '0';
+        // Muestra el precio
+        priceElement.style.display = 'block';
+      } else {
+        // Muestra la imagen
+        img.style.opacity = '1';
+        // Oculta el precio
+        priceElement.style.display = 'none';
+      }
+    }
+  </script>
+</body>
+</html>
