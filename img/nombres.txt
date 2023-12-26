@@ -1,9 +1,20 @@
-03 - Bart.jpg 
-04 - Krusty.jpg 
+03 - Bart Simpson.jpg 
+04 - Krusty the Clown.jpg 
 1035 - Gamer Bart.jpg 
 1144 - Belly Dancer Homer.jpg 
 1162 - Glowing Mr. Burns Chase.jpg 
 1162 - Glowing Mr. Burns.jpg 
+1167 - Stupid Sexy Flanders.jpg 
+1199 - Bartigula.jpg 
+1200 - Emperor Montimus.jpg 
+1201 - Lisandra.jpg 
+1202 - Marjora.jpg 
+1203 - Obeseus.jpg 
+1204 - Young Obeseus.jpg 
+1205 - Nelson Muntz.jpg 
+1252 - Homer in Hedges.jpg 
+1255 - Jimbo Jones.jpg 
+1271 - Dolph Starbeam.jpg 
 496 - Radioactive Man.jpg 
 497 - Lisa Simpson.jpg 
 498 - Maggie Simpson.jpg 
@@ -19,7 +30,9 @@
 900 - Gangster Bart.jpg 
 901 - Barney.jpg 
 902 - Duffman.jpg 
+903 - Itchy.jpg 
 904 - Scratchy.jpg 
 905 - USA Homer.jpg 
 907 - Otto Mann.jpg 
 908 - Ralph.jpg 
+Nubes.jpg 
