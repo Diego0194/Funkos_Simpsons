@@ -1,3 +1,9 @@
+03 - Bart.jpg 
+04 - Krusty.jpg 
+1035 - Gamer Bart.jpg 
+1144 - Belly Dancer Homer.jpg 
+1162 - Glowing Mr. Burns Chase.jpg 
+1162 - Glowing Mr. Burns.jpg 
 496 - Radioactive Man.jpg 
 497 - Lisa Simpson.jpg 
 498 - Maggie Simpson.jpg 
@@ -11,3 +17,9 @@
 833 - Ned Flanders.jpg 
 899 - Chief Wiggum.jpg 
 900 - Gangster Bart.jpg 
+901 - Barney.jpg 
+902 - Duffman.jpg 
+904 - Scratchy.jpg 
+905 - USA Homer.jpg 
+907 - Otto Mann.jpg 
+908 - Ralph.jpg 
