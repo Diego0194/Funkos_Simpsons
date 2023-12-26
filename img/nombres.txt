@@ -1,5 +1,14 @@
 03 - Bart Simpson.jpg 
 04 - Krusty the Clown.jpg 
+1025 - Grim Reaper Homer.jpg 
+1026 - Spaceman Bart.jpg 
+1027 - Zombie Bart.jpg 
+1028 - Witch Marge.jpg 
+1029 - Devil Flanders.jpg 
+1030 - Vampire Krusty.jpg 
+1031 - Jack in the Box Homer.jpg 
+1033 - Donut Head Homer.jpg 
+1034 - Werewolf Bart.jpg 
 1035 - Gamer Bart.jpg 
 1144 - Belly Dancer Homer.jpg 
 1162 - Glowing Mr. Burns Chase.jpg 
@@ -14,7 +23,13 @@
 1205 - Nelson Muntz.jpg 
 1252 - Homer in Hedges.jpg 
 1255 - Jimbo Jones.jpg 
+1261 - Snail Lisa.jpg 
+1262 - Hugo Simpson.jpg 
+1263 - Homerzilla.jpg 
+1264 - Skeleton Marge.jpg 
+1265 - Witch Maggie.jpg 
 1271 - Dolph Starbeam.jpg 
+1282 - Kearney Zzyzwicz.jpg 
 496 - Radioactive Man.jpg 
 497 - Lisa Simpson.jpg 
 498 - Maggie Simpson.jpg 
@@ -24,6 +39,13 @@
 502 - Homer Muumuu.jpg 
 503 - Bartman.jpg 
 774 - Sideshow Bob.jpg 
+819 - Panther Marge.jpg 
+820 - Fly Boy Bart.jpg 
+821 - Daemon Lisa.jpg 
+822 - King Homer.jpg 
+823 - Alien Maggie.jpg 
+824 - Evil Groundskeeper Willie.jpg 
+825 - Vampire Mr Burns.jpg 
 832 - Comic Book Guy.jpg 
 833 - Ned Flanders.jpg 
 899 - Chief Wiggum.jpg 
@@ -33,6 +55,7 @@
 903 - Itchy.jpg 
 904 - Scratchy.jpg 
 905 - USA Homer.jpg 
+906 - Lard Lad.jpg 
 907 - Otto Mann.jpg 
 908 - Ralph.jpg 
-Nubes.jpg 
+909 - Couch Homer.jpg 
