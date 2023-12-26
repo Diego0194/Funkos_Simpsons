@@ -3,59 +3,123 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Colección Funko Simpsons</title>
+  <title>Mi Colección de Funko Pops Pokémon</title>
   <style>
     body {
       font-family: 'Arial', sans-serif;
       margin: 20px;
       background-color: #f0f0f0;
-    }
-
-    h1 {
       text-align: center;
-      color: #333;
     }
 
     .funko-container {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-      gap: 20px;
+      gap: 10px; /* Ajusta este valor según sea necesario */
       justify-content: space-around;
     }
 
-    .funko-card {
-      position: relative;
-      padding: 10px;
-      background-color: #fff;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-      text-align: center;
-      overflow: hidden; /* Oculta cualquier parte adicional de la imagen que se desplace fuera del contenedor */
-    }
+	.funko-card {
+	  position: relative;
+	  padding: 10px;
+	  background-color: #fff;
+	  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+	  text-align: center;
+	  overflow: hidden;
+	  margin: 5px;
+	  display: flex; /* Agrega esta línea */
+	  flex-direction: column; /* Añade esta línea para que los elementos se apilen verticalmente */
+	  align-items: center; /* Añade esta línea para centrar los elementos horizontalmente */
+	}
 
     h2 {
       color: #e44d26;
       font-size: 1.2em;
-      margin-bottom: 8px; /* Añadido espacio entre el título y la imagen */
+      margin-bottom: 8px;
     }
 
     img {
-      max-width: 100%;
-      max-height: 100%;
-      object-fit: contain;
-      cursor: pointer; /* Cambio el cursor a puntero para indicar que es interactivo */
-      transition: opacity 0.3s ease; /* Agregado efecto de transición al cambiar la opacidad de la imagen */
+	  max-width: 100%;
+	  max-height: 100%;
+	  object-fit: contain;
+	  cursor: pointer;
+	  transition: opacity 0.3s ease, transform 0.3s ease;
+	  margin-top: auto; /* Mueve la imagen hacia abajo (parte inferior) */
     }
 
     .precio {
-      color: #555;
+      color: #e44d26;
       font-size: 1.2em;
       position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      display: none; /* Inicialmente oculto */
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background-color: white;
+      padding: 8px;
+      box-sizing: border-box;
+      display: none;
     }
 
+    .logos-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      white-space: nowrap; /* Evitará que el texto se divida en varias líneas */
+    }
+
+    .logo {
+      height: 80px;
+      width: 130px;
+      margin: 0 -10px; /* Ajusta estos valores según sea necesario */
+    }
+
+	.lightbox-container {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.8);
+      justify-content: center;
+      align-items: center;
+      z-index: 1;
+    }
+
+    .lightbox-content {
+      text-align: center;
+      background-color: white; /* Añade un fondo blanco */
+      padding: 20px; /* Ajusta el espaciado según sea necesario */
+      max-width: 80%; /* Establece un ancho máximo */
+      max-height: 80%; /* Establece una altura máxima */
+      box-sizing: border-box;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .lightbox-image {
+      width: 381px;
+      height: 381px;
+      object-fit: contain; /* Añade esta propiedad para escalar sin distorsionar */
+      border: 2px solid white;
+      box-sizing: border-box;
+    }
+	
+    .lightbox-description {
+      color: #333;
+      font-size: 1.5em;
+      margin-top: 10px;
+    }
+	
+	.lightbox-title {
+      color: #e44d26;
+      font-size: 1.8em;
+      margin-bottom: 10px;
+	  font-weight: bold;
+    }
+	
     @media only screen and (max-width: 1169px) {
       .funko-container {
         grid-template-columns: repeat(2, minmax(100px, 1fr));
@@ -65,59 +129,140 @@
         font-size: 1em;
       }
     }
+	
   </style>
 </head>
-
 <body>
-  <h1>Mi Colección de Funko Pops Los Simpson</h1>
 
+<script>
+  function openLightbox(imgSrc, title, description) {
+    const lightboxContainer = document.getElementById('lightbox-container');
+    const lightboxImage = document.getElementById('lightbox-image');
+    const lightboxDescription = document.getElementById('lightbox-description');
+    const lightboxTitle = document.getElementById('lightbox-title');
+
+    lightboxImage.src = imgSrc;
+    lightboxImage.alt = 'Lightbox Image';
+    lightboxContainer.style.display = 'flex';
+
+    // Muestra el título en la lightbox
+    lightboxTitle.innerText = title;
+
+    // Muestra la imagen en la lightbox
+    lightboxImage.style.display = 'block';
+
+    // Muestra la descripción (incluyendo el precio) en la lightbox
+    lightboxDescription.innerText = description;
+  }
+
+  function closeLightbox() {
+    const lightboxContainer = document.getElementById('lightbox-container');
+    const lightboxImage = document.getElementById('lightbox-image');
+    const lightboxDescription = document.getElementById('lightbox-description');
+    const lightboxTitle = document.getElementById('lightbox-title');
+
+    lightboxContainer.style.display = 'none';
+
+    // Restaura la visibilidad por defecto
+    lightboxImage.style.display = 'none';
+    lightboxDescription.innerText = '';
+    lightboxTitle.innerText = '';
+  }
+</script>
+
+  <div class="logos-container">
+    <img src="img/Funko.png" alt="Funko Image" class="logo">
+    <img src="img/Pop.png" alt="Pop Image" class="logo">
+    <img src="img/Simpsons.png" alt="Simpsons Image" class="logo">
+  </div>
+  
   <div class="funko-container">
+  <div class="funko-card" onclick="openLightbox('img/496 - Radioactive Man.jpg', '#496 - Radioactive Man', 'Precio: 11,00€');">
+    <h2>#496 - Radioactive Man</h2>
+    <img src="img/496 - Radioactive Man.jpg" alt="#496 - Radioactive Man">
+    <p class="precio">Precio: 11,00€</p>
+  </div>
+  
+  <div class="funko-card" onclick="openLightbox('img/497 - Lisa Simpson.jpg', '#497 - Lisa Simpson', 'Precio: 11,00€');">
+    <h2>#497 - Lisa Simpson</h2>
+    <img src="img/497 - Lisa Simpson.jpg" alt="#497 - Lisa Simpson">
+    <p class="precio">Precio: 11,00€</p>
+  </div>
+  
+  <div class="funko-card" onclick="openLightbox('img/498 - Maggie Simpson.jpg', '#498 - Maggie Simpson', 'Precio: 11,00€');">
+    <h2>#498 - Maggie Simpson</h2>
+    <img src="img/498 - Maggie Simpson.jpg" alt="#498 - Maggie Simpson">
+    <p class="precio">Precio: 11,00€</p>
+  </div>
+  
+  <div class="funko-card" onclick="openLightbox('img/499 - Grampa Simpson.jpg', '#499 - Grampa Simpson', 'Precio: 11,00€');">
+    <h2>#499 - Grampa Simpson</h2>
+    <img src="img/499 - Grampa Simpson.jpg" alt="#499 - Grampa Simpson">
+    <p class="precio">Precio: 11,00€</p>
+  </div>
+  
+  <div class="funko-card" onclick="openLightbox('img/500 - Moe Szyslak.jpg', '#500 - Moe Szyslak', 'Precio: 11,00€');">
+    <h2>#500 - Moe Szyslak</h2>
+    <img src="img/500 - Moe Szyslak.jpg" alt="#500 - Moe Szyslak">
+    <p class="precio">Precio: 11,00€</p>
+  </div>
+  
+  <div class="funko-card" onclick="openLightbox('img/501 - Mr Burns.jpg', '#501 - Mr Burns', 'Precio: 11,00€');">
+    <h2>#501 - Mr Burns</h2>
+    <img src="img/501 - Mr Burns.jpg" alt="#501 - Mr Burns">
+    <p class="precio">Precio: 11,00€</p>
+  </div>
+  
+  <div class="funko-card" onclick="openLightbox('img/502 - Homer Muumuu.jpg', '#502 - Homer Muumuu', 'Precio: 11,00€');">
+    <h2>#502 - Homer Muumuu</h2>
+    <img src="img/502 - Homer Muumuu.jpg" alt="#502 - Homer Muumuu">
+    <p class="precio">Precio: 11,00€</p>
+  </div>
+  
+  <div class="funko-card" onclick="openLightbox('img/503 - Bartman.jpg', '#503 - Bartman', 'Precio: 11,00€');">
+    <h2>#503 - Bartman</h2>
+    <img src="img/503 - Bartman.jpg" alt="#503 - Bartman">
+    <p class="precio">Precio: 11,00€</p>
+  </div>
+  
+  <div class="funko-card" onclick="openLightbox('img/774 - Sideshow Bob.jpg', '#774 - Sideshow Bob', 'Precio: 11,00€');">
+    <h2>#774 - Sideshow Bob</h2>
+    <img src="img/774 - Sideshow Bob.jpg" alt="#774 - Sideshow Bob">
+    <p class="precio">Precio: 11,00€</p>
+  </div>
+  
+  <div class="funko-card" onclick="openLightbox('img/832 - Comic Book Guy.jpg', '#832 - Comic Book Guy', 'Precio: 11,00€');">
+    <h2>#832 - Comic Book Guy</h2>
+    <img src="img/832 - Comic Book Guy.jpg" alt="#832 - Comic Book Guy">
+    <p class="precio">Precio: 11,00€</p>
+  </div>
+  
+  <div class="funko-card" onclick="openLightbox('img/833 - Ned Flanders.jpg', '#833 - Ned Flanders', 'Precio: 11,00€');">
+    <h2>#833 - Ned Flanders</h2>
+    <img src="img/833 - Ned Flanders.jpg" alt="#833 - Ned Flanders">
+    <p class="precio">Precio: 11,00€</p>
+  </div>
+  
+  <div class="funko-card" onclick="openLightbox('img/899 - Chief Wiggum.jpg', '#899 - Chief Wiggum', 'Precio: 11,00€');">
+    <h2>#899 - Chief Wiggum</h2>
+    <img src="img/899 - Chief Wiggum.jpg" alt="#899 - Chief Wiggum">
+    <p class="precio">Precio: 11,00€</p>
+  </div>
+  
+  <div class="funko-card" onclick="openLightbox('img/900 - Gangster Bart.jpg', '#900 - Gangster Bart', 'Precio: 11,00€');">
+    <h2>#900 - Gangster Bart</h2>
+    <img src="img/900 - Gangster Bart.jpg" alt="#900 - Gangster Bart">
+    <p class="precio">Precio: 11,00€</p>
+  </div>
 
-    <div class="funko-card" onclick="toggleView(this)">
-      <h2>Funko Pop #496 - Radioactive Man</h2>
-      <img src="img/496 - Radioactive Man.jpg" alt="Funko Pop #496 - Radioactive Man">
-      <p class="precio">Precio: 11,00€</p>
-    </div>
-
-    <div class="funko-card" onclick="toggleView(this)">
-      <h2>Funko Pop #497 - Lisa Simpson</h2>
-      <img src="img/497 - Lisa Simpson.jpg" alt="Funko Pop #497 - Lisa Simpson">
-      <p class="precio">Precio: 11,00</p>
-    </div>
-
-    <div class="funko-card" onclick="toggleView(this)">
-      <h2>Funko Pop #498 - Maggie Simpson</h2>
-      <img src="img/498 - Maggie Simpson.jpg" alt="Funko Pop #498 - Maggie Simpson">
-      <p class="precio">Precio: 11,00€</p>
-    </div>
-
-    <div class="funko-card" onclick="toggleView(this)">
-      <h2>Funko Pop #499 - Grampa Simpson</h2>
-      <img src="img/499 - Grampa Simpson.jpg" alt="Funko Pop #499 - Grampa Simpson">
-      <p class="precio">Precio: 10,50€</p>
-    </div>
 
 <!-- Continúa agregando más Funko Pops según sea necesario -->
-
 </div>
-  <script>
-    function toggleView(card) {
-      var img = card.querySelector('img');
-      var priceElement = card.querySelector('.precio');
-
-      // Verifica si la imagen está visible
-      if (img.style.opacity === '1') {
-        // Desvanece la imagen
-        img.style.opacity = '0';
-        // Muestra el precio
-        priceElement.style.display = 'block';
-      } else {
-        // Muestra la imagen
-        img.style.opacity = '1';
-        // Oculta el precio
-        priceElement.style.display = 'none';
-      }
-    }
-  </script>
+<div id="lightbox-container" class="lightbox-container" onclick="closeLightbox()">
+  <div class="lightbox-content">
+    <div id="lightbox-title" class="lightbox-title"></div>
+    <img id="lightbox-image" class="lightbox-image" src="" alt="Lightbox Image">
+    <div id="lightbox-description" class="lightbox-description"></div>
+  </div>
 </body>
 </html>
