@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Funko Pops The Simpsons</title>
   <link rel="icon" href="img/Pop.png" type="image/png">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bangers&display=swap">
   <style>
     body {
       font-family: 'Arial', sans-serif;
@@ -34,12 +35,15 @@
 	  align-items: center; /* Añade esta línea para centrar los elementos horizontalmente */
 	}
 
-    h2 {
-      color: #e44d26;
-      font-size: 1.2em;
-      margin-bottom: 8px;
-    }
-
+	.funko-card h2,
+	.funko-card .precio {
+	  font-family: 'Bangers', cursive;
+	  color: #ffd600; /* Color del texto */
+	  font-size: 1.3em;
+	  margin-bottom: 8px;
+	  -webkit-text-stroke: 0.5px black; /* Contorno negro */
+	}
+	
     img {
 	  max-width: 100%;
 	  max-height: 100%;
@@ -112,14 +116,17 @@
     .lightbox-description {
       color: #333;
       font-size: 1.5em;
+	  font-family: 'Bangers', cursive;
       margin-top: 10px;
     }
 	
 	.lightbox-title {
-      color: #e44d26;
-      font-size: 1.8em;
-      margin-bottom: 10px;
+	  font-family: 'Bangers', cursive;
+	  color: #ffd600; /* Color del texto */
+	  font-size: 1.8em;
+	  margin-bottom: 10px;
 	  font-weight: bold;
+	  -webkit-text-stroke: 1px black; /* Contorno negro */
     }
 	
     @media only screen and (max-width: 1169px) {
@@ -544,6 +551,18 @@
 	  <h2>#1265 - Witch Maggie</h2>
 	  <img src="img/1265 - Witch Maggie.jpg" alt="#1265 - Witch Maggie">
 	  <p class="precio">Precio: 16,20€</p>
+	</div>
+	
+	<div class="funko-card" onclick="openLightbox('img/1267 - Itchy Scratchy.jpg', '#1267 - Itchy Scratchy', 'Precio: 21,70€');">
+	  <h2>#1267 - Itchy & Scratchy</h2>
+	  <img src="img/1267 - Itchy Scratchy.jpg" alt="#1267 - Itchy & Scratchy">
+	  <p class="precio">Precio: 21,70€</p>
+	</div>
+	
+	<div class="funko-card" onclick="openLightbox('img/Soda - Homer.jpg', 'Funko Soda - Homer', 'Precio: 14,95€');">
+	  <h2>Funko Soda - Homer</h2>
+	  <img src="img/Soda - Homer.jpg" alt="Soda - Homer">
+	  <p class="precio">Precio: 14,95</p>
 	</div>
 
 <!-- Continúa agregando más Funko Pops según sea necesario -->
